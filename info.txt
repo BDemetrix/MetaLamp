@@ -1,1 +1,3 @@
 MetaLamp - frontend educational program.
+
+Все шрифты должны быть подключены и сгенерированы в форматах .ttf, .woff, .svg
