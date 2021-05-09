@@ -1,0 +1,51 @@
+
+.field-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1F2041;
+}
+
+.dropdown {
+
+	// .dropdown__title
+	&__title {
+	}
+	// .dropdown__option-inner
+	&__option-inner {
+	}
+	// .dropdown__option-title
+	&__option-title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #1F2041;
+	}
+	// .dropdown__option-quantity
+	&__option-quantity {
+    
+	}
+}
+
+.quantity {
+
+	// .quantity__button
+	&__button {
+		// .quantity__button_minus
+		&_minus {
+		}
+		// .quantity__button_plus
+		&_plus {
+		}
+	}
+	// .quantity__button-icon
+	&__button-icon {
+	}
+	// .quantity__input
+	&__input {
+	}
+}
