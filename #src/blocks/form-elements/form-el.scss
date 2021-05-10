@@ -1,51 +1,82 @@
+$txt-color: #1F2041;
 
+.input {
+	border-radius: 0 !important;
+	width: 100%;
+	display: block;
+	padding: 13px 15px;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba($color: $txt-color, $alpha: .75);
+  
+  &::placeholder {
+    color: rgba($color: $txt-color, $alpha: .25)
+  }
+  &:hover,
+  &:focus {
+    &::placeholder {
+      color: rgba($color: $txt-color, $alpha: .50)
+    }
+  }
+	&._focus {
+	}
+	&._error {
+	}
+}
+
+// GENERAL CLASS FOR FIELD HEADERS
 .field-title {
+	margin: 0;
+	padding: 5px 0;
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
   text-transform: uppercase;
-  color: #1F2041;
+  color: $txt-color;
 }
 
-.dropdown {
-
-	// .dropdown__title
+.text-field {
+	// .text-field__title
 	&__title {
 	}
-	// .dropdown__option-inner
-	&__option-inner {
+	// .text-field__input
+	&__input {
+    overflow: hidden;
+    border-radius: 4px;
+    border: 1px solid rgba($color: $txt-color, $alpha: .25);
+
+    &._focus,
+    &._hover {
+      border: 1px solid rgba($color: $txt-color, $alpha: .75);
+    }
 	}
-	// .dropdown__option-title
-	&__option-title {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase;
-    color: #1F2041;
-	}
-	// .dropdown__option-quantity
-	&__option-quantity {
-    
-	}
+  
 }
 
-.quantity {
 
-	// .quantity__button
-	&__button {
-		// .quantity__button_minus
-		&_minus {
-		}
-		// .quantity__button_plus
-		&_plus {
-		}
-	}
-	// .quantity__button-icon
-	&__button-icon {
-	}
-	// .quantity__input
-	&__input {
-	}
+
+
+
+
+
+
+
+@media (min-width: 300px) {
+  .col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+@media (min-width: 600px) {
+  .col {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+@media (min-width: 900px) {
+  .col {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+  }
 }

@@ -4,185 +4,166 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="../null.css">
+  <link rel="stylesheet" href="form-el.css">
+  <title>fotm-el</title>
+
+  <style>
+    
+    body {
+     /*  overflow-x: hidden; */
+      padding: 30px;
+      margin: 0;
+    }
+    .wrapper {
+      display: flex;
+      margin: 0 -30px;
+    }
+    .col {
+      padding: 0 30px;
+    }
+    .col__item{
+      margin-bottom: 20px;
+    }
+
+  </style>
 </head>
 <body>
   <div class="wrapper">
-    <div class="coll">
-  
-      <div class="text-field">
-        <h3 class="text-field__title">Text Field</h3>
-        <div class="text-field__input">
-          <input type="text" autocomplete="off" name="form[]" class="input">
+    <div class="col">
+      <div class="col__item">
+
+        <div class="text-field">
+          <h3 class="text-field__title field-title">Text Field</h3>
+          <div class="text-field__input">
+            <input class="input" type="text" autocomplete="off" name="form[]" placeholder="Text">
+          </div>
         </div>
+
       </div>
-  
-      <div class="dropdown">
-        <h3 class="dropdown__title field-title">Dropdown</h3>
-        <select name="">
-          <option value="0" selected="selected">nothing selected</option>
-          <option value="1">
-            <div class="dropdown__option-inner">
-              <div class="dropdown__option-title">option 1</div>
-              <div class="dropdown__option-quantity quantity">
-                <div class="quantity__button quantity__button_minus">
-                  <span class="quantity__button-smbl">-</span>
-                </div>
-                <div class="quantity__input">
-                  <input type="text" autocomplete="off" value="1" name="form[]">
-                </div>
-                <div class="quantity__button quantity__button_plus">
-                  <span class="quantity__button-smbl">+</span>
-                </div>
-              </div>
-            </div>
-          </option>
-          <option value="2">
-            <div class="dropdown__option-inner">
-              <div class="dropdown__option-title">option 2</div>
-              <div class="dropdown__option-quantity quantity">
-                <div class="quantity__button quantity__button_minus">
-                  <span class="quantity__button-smbl">-</span>
-                </div>
-                <div class="quantity__input">
-                  <input type="text" autocomplete="off" value="1" name="form[]">
-                </div>
-                <div class="quantity__button quantity__button_plus">
-                  <span class="quantity__button-smbl">+</span>
-                </div>
-              </div>
-            </div>
-          </option>
-          <option value="3">
-            <div class="dropdown__option-inner">
-              <div class="dropdown__option-title">option 3</div>
-              <div class="dropdown__option-quantity quantity">
-                <div class="quantity__button quantity__button_minus">
-                  <span class="quantity__button-smbl">-</span>
-                </div>
-                <div class="quantity__input">
-                  <input type="text" autocomplete="off" value="1" name="form[]">
-                </div>
-                <div class="quantity__button quantity__button_plus">
-                  <span class="quantity__button-smbl">+</span>
-                </div>
-              </div>
-            </div>
-          </option>
-          <option value="4">
-            <div class="dropdown__option-inner">
-              <div class="dropdown__option-title">option 4</div>
-              <div class="dropdown__option-quantity quantity">
-                <div class="quantity__button quantity__button_minus">
-                  <span class="quantity__button-smbl">-</span>
-                </div>
-                <div class="quantity__input">
-                  <input type="text" autocomplete="off" value="1" name="form[]">
-                </div>
-                <div class="quantity__button quantity__button_plus">
-                  <span class="quantity__button-smbl">+</span>
-                </div>
-              </div>
-            </div>
-          </option>
-          <option value="5">
-            <div class="dropdown__option-inner">
-              <div class="dropdown__option-title">option 5</div>
-              <div class="dropdown__option-quantity quantity">
-                <div class="quantity__button quantity__button_minus">
-                  <span class="quantity__button-smbl">-</span>
-                </div>
-                <div class="quantity__input">
-                  <input type="text" autocomplete="off" value="1" name="form[]">
-                </div>
-                <div class="quantity__button quantity__button_plus">
-                  <span class="quantity__button-smbl">+</span>
-                </div>
-              </div>
-            </div>
-          </option>
-        </select>
-      </div>
+      <div class="col__item">
+
+        <div class="dropdown">
+          <h3 class="dropdown__title field-title">Dropdown</h3>
+          <select name="">
+            <option value="0" selected="selected">Nothing selected</option>
+            <option value="1">option 1</option>
+            <option value="2">option 2</option>
+            <option value="3">option 3</option>
+            <option value="4">option 4</option>
+            <option value="5">option 5</option>
+          </select>
+        </div>
       
-      <!-- masked text field -->
-      <div class="text-field">
-        <h3 class="text-field__title field-title">Masked text field</h3>
-        <div class="text-field__input">
-          <input type="text" autocomplete="off" name="form[]" class="input">
-        </div>
       </div>
-
-      <!-- Date Dropdown -->
-      <div class="date-range">
-        <h3 class="date-range__title field-title">date range</h3>
-        <div class="date-range__inner">
-          <div class="date-field__input">
-            <input type="text" name="start" readonly="">
-          </div>
-          <span></span>
-          <div class="date-field__input">
-            <input type="text" name="end" readonly="">
+      <div class="col__item">
+        
+        <!-- masked text field -->
+        <div class="text-field">
+          <h3 class="text-field__title field-title">Masked text field</h3>
+          <div class="text-field__input">
+            <input type="text" autocomplete="off" name="form[]" class="input">
           </div>
         </div>
-      </div>
 
-      <!-- Date Dropdown -->
-      <div class="date-field">
-        <h3 class="date-field__title field-title">Date Dropdown</h3>
-        <div class="date-field__input">
-          <input type="text" data-date="01/25/2020" readonly="">
+      </div>
+      <div class="col__item">
+      
+        <!-- Date Dropdown -->
+        <div class="date-range">
+          <h3 class="date-range__title field-title">date range</h3>
+          <div class="date-range__inner">
+            <div class="date-field__input">
+              <input type="text" name="start" readonly="">
+            </div>
+            <span></span>
+            <div class="date-field__input">
+              <input type="text" name="end" readonly="">
+            </div>
+          </div>
         </div>
-      </div>
 
-      <!-- filter date dropdown -->
-      <div class="filter-date">
-        <h3 class="filter-date__title field-title">Filter Date Dropdown</h3>
-        <select class="filter-date__select" name="">
-          <option class="filter-date__option" value="0" selected="selected">19 авг - 23 авг</option>
-          <option class="filter-date__option" value="1"></option>
-          <option class="filter-date__option" value="2">option 2</option>
-          <option class="filter-date__option" value="3">option 3</option>
-          <option class="filter-date__option" value="4">option 4</option>
-          <option class="filter-date__option" value="5">option 5</option>
-        </select>
       </div>
+      <div class="col__item">
+        
+        <!-- Date Dropdown -->
+        <div class="date-field">
+          <h3 class="date-field__title field-title">Date Dropdown</h3>
+          <div class="date-field__input">
+            <input type="text" data-date="01/25/2020" readonly="">
+          </div>
+        </div>
 
-      <!-- subscription text field -->
-      <div class="subscribe-field">
-        <h3 class="subscribe-field field-title">subscription text field</h3>
-        <div class="subscribe-field__input">
-          <input type="text" placeholder="Email">
-          <button class="subscribe-field__btn">
-            <svg>
+      </div>
+      <div class="col__item">
+      
+        <!-- filter date dropdown -->
+        <div class="filter-date">
+          <h3 class="filter-date__title field-title">Filter Date Dropdown</h3>
+          <select class="filter-date__select" name="">
+            <option class="filter-date__option" value="0" selected="selected">19 авг - 23 авг</option>
+            <option class="filter-date__option" value="1"></option>
+            <option class="filter-date__option" value="2">option 2</option>
+            <option class="filter-date__option" value="3">option 3</option>
+            <option class="filter-date__option" value="4">option 4</option>
+            <option class="filter-date__option" value="5">option 5</option>
+          </select>
+        </div>
+
+      </div>
+      <div class="col__item">
+        
+        <!-- subscription text field -->
+        <div class="subscribe-field">
+          <h3 class="subscribe-field field-title">subscription text field</h3>
+          <div class="subscribe-field__input">
+            <input type="text" placeholder="Email">
+            <button class="subscribe-field__btn">
+              <svg>
                 <use xlink:href="images/symbol/sprite.svg#arrow"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+      <div class="col__item">
+      
+        <!-- quantity -->
+        <div class="quantity">
+          <div class="quantity__button quantity__button_minus">
+            <svg class="quantity__button-icon">
+              <use xlink:href="img/symbol/sprite.svg#minus"></use>
             </svg>
-          </button>
+          </div>
+          <div class="quantity__input">
+            <input type="text" autocomplete="off" value="1" name="form[]">
+          </div>
+          <div class="quantity__button quantity__button_plus">
+            <svg class="quantity__button-icon">
+              <use xlink:href="img/symbol/sprite.svg#plus"></use>
+            </svg>
+          </div>
         </div>
+      
       </div>
-
-      <!-- quantity -->
-      <div class="quantity">
-        <div class="quantity__button quantity__button_minus">
-          <svg class="quantity__button-icon">
-            <use xlink:href="img/symbol/sprite.svg#minus"></use>
-          </svg>
-        </div>
-        <div class="quantity__input">
-          <input type="text" autocomplete="off" value="1" name="form[]">
-        </div>
-        <div class="quantity__button quantity__button_plus">
-          <svg class="quantity__button-icon">
-            <use xlink:href="img/symbol/sprite.svg#plus"></use>
-          </svg>
-        </div>
+      <div class="col__item">
+      
+      
+      
       </div>
-
+      <div class="col__item">
+      
+        
+      
+      </div>
 
     </div>
   
-    <div class="coll"></div>
-    <div class="coll"></div>
+    <div class="col"></div>
+    <div class="col"></div>
   </div>
+  <script src="form-el.js"></script>
 </body>
 </html>
 
