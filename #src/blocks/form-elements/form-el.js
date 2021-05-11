@@ -1,5 +1,6 @@
 (function () {
   
+  // Input
   let inputs = document.querySelectorAll('.input');
   inputs.forEach( input => {
     const parent = input.parentElement;
@@ -19,6 +20,6 @@
     });
   });
 
-
+  
 
 }());

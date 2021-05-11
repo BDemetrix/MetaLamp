@@ -9,9 +9,24 @@
   <title>fotm-el</title>
 
   <style>
-    
+    @font-face {
+      font-family: "Montserrat";
+      font-display: swap;
+      src: url("../../fonts/montserrat-v15-latin-ext_cyrillic-ext-regular.ttf") format("ttf"), url("../../fonts/montserrat-v15-latin-ext_cyrillic-ext-regular.svg") format("svg"), url("../../fonts/montserrat-v15-latin-ext_cyrillic-ext-regular.woff2") format("woff2"), url("../../fonts/montserrat-v15-latin-ext_cyrillic-ext-regular.woff") format("woff");
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "Montserrat";
+      font-display: swap;
+      src: url("../../fonts/montserrat-v15-latin-ext_cyrillic-ext-700.ttf") format("ttf"), url("../../fonts/montserrat-v15-latin-ext_cyrillic-ext-700.svg") format("svg"), url("../../fonts/montserrat-v15-latin-ext_cyrillic-ext-700.woff2") format("woff2"), url("../../fonts/montserrat-v15-latin-ext_cyrillic-ext-700.woff") format("woff");
+      font-weight: 700;
+      font-style: normal;
+    }
+
     body {
-     /*  overflow-x: hidden; */
+      font-family: "Montserrat";
       padding: 30px;
       margin: 0;
     }
@@ -26,12 +41,31 @@
       margin-bottom: 20px;
     }
 
+    @media (min-width: 300px) {
+      .col {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+    @media (min-width: 600px) {
+      .col {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+    }
+    @media (min-width: 900px) {
+      .col {
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+      }
+    }
+
   </style>
 </head>
 <body>
   <div class="wrapper">
     <div class="col">
-      <div class="col__item">
+      <div class="col__item"> <!-- text-field -->
 
         <div class="text-field">
           <h3 class="text-field__title field-title">Text Field</h3>
@@ -46,12 +80,12 @@
         <div class="dropdown">
           <h3 class="dropdown__title field-title">Dropdown</h3>
           <select name="">
-            <option value="0" selected="selected">Nothing selected</option>
-            <option value="1">option 1</option>
-            <option value="2">option 2</option>
-            <option value="3">option 3</option>
-            <option value="4">option 4</option>
-            <option value="5">option 5</option>
+            <option value="0" selected="selected">Сколько гостей</option>
+            <option value="1">1 гость</option>
+            <option value="2">2 гостя</option>
+            <option value="3">3 гостя</option>
+            <option value="4">4 гостя</option>
+            <option value="5">5 гостей</option>
           </select>
         </div>
       
@@ -163,6 +197,8 @@
     <div class="col"></div>
     <div class="col"></div>
   </div>
+  <script src="../common.js"></script>
+  <script src="select.js"></script>
   <script src="form-el.js"></script>
 </body>
 </html>
