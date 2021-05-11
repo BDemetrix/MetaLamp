@@ -21,7 +21,7 @@
     });
   }
   function selects_close(e) {
-    const selects = document.querySelectorAll('.select');
+    const selects = document.querySelectorAll('.select._active');
     if (!e.target.closest('.select')) {
       for (let i = 0; i < selects.length; i++) {
         const select = selects[i];

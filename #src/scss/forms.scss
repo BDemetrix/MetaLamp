@@ -356,6 +356,9 @@ textarea.input {
 		}
 		// .quantity__button_minus
 		&_minus {
+			&::before {
+				display: none;
+			}
 		}
 	}
 	// .quantity__input

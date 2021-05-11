@@ -75,7 +75,7 @@
         </div>
 
       </div>
-      <div class="col__item">
+      <div class="col__item"> <!-- dropdown -->
 
         <div class="dropdown">
           <h3 class="dropdown__title field-title">Dropdown</h3>
@@ -90,13 +90,75 @@
         </div>
       
       </div>
-      <div class="col__item">
+      <div class="col__item"> <!-- masked text field -->
         
         <!-- masked text field -->
         <div class="text-field">
           <h3 class="text-field__title field-title">Masked text field</h3>
           <div class="text-field__input">
-            <input type="text" autocomplete="off" name="form[]" class="input">
+            <input class="input _date" type="text" autocomplete="off" name="form[]" placeholder="ДД.ММ.ГГГГ">
+          </div>
+        </div>
+
+      </div>
+      <div class="col__item">
+
+        <!-- Order dropdown type="count" -->
+        <div class="order-dropdown">
+          <h3 class="order-dropdown__title field-title">Order Dropdown</h3>
+          <div class="order-select" type="count"> <!-- type="list"  -->
+            <div class="order-select__title">
+              <div class="order-select__value"><span>Сколько гостей</span></div>
+            </div>
+            
+            <div class="order-select__options">
+
+              <div class="order-select__option ">
+                  <div class="order-select__option-title">Спальни</div>
+                  <div class="order-select__quantity quantity">
+                    <div class="quantity__button quantity__button_minus">
+                      <span>-</span>
+                    </div>
+                    <div class="quantity__input">
+                      <input type="text" autocomplete="off" value="1" name="form[]">
+                    </div>
+                    <div class="quantity__button quantity__button_plus">
+                      <span>+</span>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="order-select__option ">
+                  <div class="order-select__option-title">Кровати</div>
+                  <div class="order-select__quantity quantity">
+                    <div class="quantity__button quantity__button_minus">
+                      <span>-</span>
+                    </div>
+                    <div class="quantity__input">
+                      <input type="text" autocomplete="off" value="1" name="form[]">
+                    </div>
+                    <div class="quantity__button quantity__button_plus">
+                      <span>+</span>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="order-select__option ">
+                  <div class="order-select__option-title">Ванные комнаты</div>
+                  <div class="order-select__quantity quantity">
+                    <div class="quantity__button quantity__button_minus">
+                      <span>-</span>
+                    </div>
+                    <div class="quantity__input">
+                      <input type="text" autocomplete="off" value="1" name="form[]">
+                    </div>
+                    <div class="quantity__button quantity__button_plus">
+                      <span>+</span>
+                    </div>
+                  </div>
+              </div>
+
+            </div>
           </div>
         </div>
 
@@ -136,7 +198,7 @@
           <h3 class="filter-date__title field-title">Filter Date Dropdown</h3>
           <select class="filter-date__select" name="">
             <option class="filter-date__option" value="0" selected="selected">19 авг - 23 авг</option>
-            <option class="filter-date__option" value="1"></option>
+            <option class="filter-date__option" value="1">option 1</option>
             <option class="filter-date__option" value="2">option 2</option>
             <option class="filter-date__option" value="3">option 3</option>
             <option class="filter-date__option" value="4">option 4</option>
@@ -163,23 +225,6 @@
       </div>
       <div class="col__item">
       
-        <!-- quantity -->
-        <div class="quantity">
-          <div class="quantity__button quantity__button_minus">
-            <svg class="quantity__button-icon">
-              <use xlink:href="img/symbol/sprite.svg#minus"></use>
-            </svg>
-          </div>
-          <div class="quantity__input">
-            <input type="text" autocomplete="off" value="1" name="form[]">
-          </div>
-          <div class="quantity__button quantity__button_plus">
-            <svg class="quantity__button-icon">
-              <use xlink:href="img/symbol/sprite.svg#plus"></use>
-            </svg>
-          </div>
-        </div>
-      
       </div>
       <div class="col__item">
       
@@ -197,6 +242,7 @@
     <div class="col"></div>
     <div class="col"></div>
   </div>
+  <script src="../vendors/js/inputmask.min.js"></script>
   <script src="../common.js"></script>
   <script src="select.js"></script>
   <script src="form-el.js"></script>
