@@ -45,6 +45,19 @@
     } 
   });
 
+  // Order-Select =================================
+
   
 
+
 }());
+
+const orderSelects = document.querySelectorAll('.order-select');
+const orderObjects = [];
+  orderSelects.forEach(select => {
+    orderObjects.push( new OrderSelect(select));
+  });
+
+/* for (let i = 0; i < orderSelects.length; i++) {
+  orderObjects.push(new OrderSelect(orderSelects[i]));
+} */

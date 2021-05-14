@@ -1,0 +1,66 @@
+<div class="order-dropdown">
+  <h3 class="order-dropdown__title field-title">Order Dropdown</h3>
+  <div class="order-select" type="conveniences">
+    <!-- type="conveniences" type="guests" -->
+    <div class="order-select__title">
+      <div class="order-select__value"><span>1 спальня, 1 кровать</span></div>
+    </div>
+    <div class="order-select__options">
+
+      <div class="order-select__option" data-name="bedroom">
+        <!-- Спальни -->
+        <div class="order-select__option-title" declensions="спальня, спальни, спален">
+          Спальни
+        </div>
+        <div class="order-select__quantity quantity">
+          <div class="quantity__button quantity__button_minus">
+            <span>-</span>
+          </div>
+          <div class="quantity__input">
+            <input type="text" autocomplete="off" value="1" name="form[]" min="1" max="5" readonly> <!-- readonly -->
+          </div>
+          <div class="quantity__button quantity__button_plus">
+            <span>+</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="order-select__option" data-name="bed">
+        <!-- Кровати -->
+        <div class="order-select__option-title" declensions="кровать, кровати, кроватей">
+          Кровати
+        </div>
+        <div class="order-select__quantity quantity">
+          <div class="quantity__button quantity__button_minus">
+            <span>-</span>
+          </div>
+          <div class="quantity__input">
+            <input type="text" autocomplete="off" value="1" name="form[]" min="1" max="7" readonly>
+          </div>
+          <div class="quantity__button quantity__button_plus">
+            <span>+</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="order-select__option" data-name="bathroom">
+        <!-- Ванные комнаты -->
+        <div class="order-select__option-title" declensions="ванная комната, ванные комнаты, ванных комнат">
+          Ванные комнаты
+        </div>
+        <div class="order-select__quantity quantity">
+          <div class="quantity__button quantity__button_minus">
+            <span>-</span>
+          </div>
+          <div class="quantity__input">
+            <input type="text" autocomplete="off" value="0" name="form[]" min="0" max="3" readonly>
+          </div>
+          <div class="quantity__button quantity__button_plus">
+            <span>+</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

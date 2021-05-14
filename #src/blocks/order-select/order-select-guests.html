@@ -1,0 +1,66 @@
+<div class="order-dropdown">
+  <h3 class="order-dropdown__title field-title">Order Dropdown</h3>
+  <div class="order-select" type="guests">
+    <!-- type="guests" type="conveniences" -->
+    <div class="order-select__title">
+      <div class="order-select__value"><span>Солько гостей</span></div>
+    </div>
+    <div class="order-select__options">
+      <div class="order-select__option" data-name="adult">
+        <!-- Взрослые -->
+        <div class="order-select__option-title" declensions="гость, гостя, гостей">
+          Взрослые
+        </div>
+        <div class="order-select__quantity quantity">
+          <div class="quantity__button quantity__button_minus">
+            <span>-</span>
+          </div>
+          <div class="quantity__input">
+            <input type="text" autocomplete="off" value="0" name="form[]" min="0" max="25" readonly> <!-- readonly -->
+          </div>
+          <div class="quantity__button quantity__button_plus">
+            <span>+</span>
+          </div>
+        </div>
+      </div>
+      <div class="order-select__option" data-name="kid">
+        <!-- Дети -->
+        <div class="order-select__option-title" declensions="">
+          Дети
+        </div>
+        <div class="order-select__quantity quantity">
+          <div class="quantity__button quantity__button_minus">
+            <span>-</span>
+          </div>
+          <div class="quantity__input">
+            <input type="text" autocomplete="off" value="0" name="form[]" min="0" max="7" readonly>
+          </div>
+          <div class="quantity__button quantity__button_plus">
+            <span>+</span>
+          </div>
+        </div>
+      </div>
+      <div class="order-select__option" data-name="baby">
+        <!-- Младенцы -->
+        <div class="order-select__option-title" declensions="младенец, младенца, младенцев">
+          Младенцы
+        </div>
+        <div class="order-select__quantity quantity _empty _full">
+          <div class="quantity__button quantity__button_minus">
+            <span>-</span>
+          </div>
+          <div class="quantity__input">
+            <input type="text" autocomplete="off" value="0" name="form[]" min="0" max="7" readonly>
+          </div>
+          <div class="quantity__button quantity__button_plus">
+            <span>+</span>
+          </div>
+        </div>
+      </div>
+      <div class="order-select__buttons">
+        <button class="order-select__button order-select__button_clean">Очистить</button>
+        <button class="order-select__button order-select__button_apply">Применить</button>
+      </div>
+    </div>
+  </div>
+</div>

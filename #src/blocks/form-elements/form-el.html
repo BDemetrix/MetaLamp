@@ -101,85 +101,15 @@
         </div>
 
       </div>
-      <div class="col__item">
-
-        <!-- Order dropdown type="count" -->
-        <div class="order-dropdown">
-          <h3 class="order-dropdown__title field-title">Order Dropdown</h3>
-          <div class="order-select" type="count"> <!-- type="list"  -->
-            <div class="order-select__title">
-              <div class="order-select__value"><span>Сколько гостей</span></div>
-            </div>
-            
-            <div class="order-select__options">
-
-              <div class="order-select__option ">
-                  <div class="order-select__option-title">Спальни</div>
-                  <div class="order-select__quantity quantity">
-                    <div class="quantity__button quantity__button_minus">
-                      <span>-</span>
-                    </div>
-                    <div class="quantity__input">
-                      <input type="text" autocomplete="off" value="1" name="form[]">
-                    </div>
-                    <div class="quantity__button quantity__button_plus">
-                      <span>+</span>
-                    </div>
-                  </div>
-              </div>
-
-              <div class="order-select__option ">
-                  <div class="order-select__option-title">Кровати</div>
-                  <div class="order-select__quantity quantity">
-                    <div class="quantity__button quantity__button_minus">
-                      <span>-</span>
-                    </div>
-                    <div class="quantity__input">
-                      <input type="text" autocomplete="off" value="1" name="form[]">
-                    </div>
-                    <div class="quantity__button quantity__button_plus">
-                      <span>+</span>
-                    </div>
-                  </div>
-              </div>
-
-              <div class="order-select__option ">
-                  <div class="order-select__option-title">Ванные комнаты</div>
-                  <div class="order-select__quantity quantity">
-                    <div class="quantity__button quantity__button_minus">
-                      <span>-</span>
-                    </div>
-                    <div class="quantity__input">
-                      <input type="text" autocomplete="off" value="1" name="form[]">
-                    </div>
-                    <div class="quantity__button quantity__button_plus">
-                      <span>+</span>
-                    </div>
-                  </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
+      <div class="col__item"> 
+        <!-- Order dropdown type="conveniences" -->
+        @@include('../order-select/order-select-conveniences.html')
       </div>
       <div class="col__item">
-      
-        <!-- Date Dropdown -->
-        <div class="date-range">
-          <h3 class="date-range__title field-title">date range</h3>
-          <div class="date-range__inner">
-            <div class="date-field__input">
-              <input type="text" name="start" readonly="">
-            </div>
-            <span></span>
-            <div class="date-field__input">
-              <input type="text" name="end" readonly="">
-            </div>
-          </div>
-        </div>
-
+        <!-- Order select type="guests" -->
+        @@include('../order-select/order-select-guests.html')
       </div>
+
       <div class="col__item">
         
         <!-- Date Dropdown -->
@@ -216,7 +146,7 @@
             <input type="text" placeholder="Email">
             <button class="subscribe-field__btn">
               <svg>
-                <use xlink:href="images/symbol/sprite.svg#arrow"></use>
+                <!-- <use xlink:href="images/symbol/sprite.svg#arrow"></use> -->
               </svg>
             </button>
           </div>
@@ -244,6 +174,7 @@
   </div>
   <script src="../vendors/js/inputmask.min.js"></script>
   <script src="../common.js"></script>
+  <script src="../order-select/OrderSelect.js"></script>
   <script src="select.js"></script>
   <script src="form-el.js"></script>
 </body>

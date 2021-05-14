@@ -1,4 +1,8 @@
+
 $txt-color: #1F2041;
+$t: 10s;
+
+@import '../order-select/order-select';
 
 .input {
 	border-radius: 5px !important;
@@ -58,119 +62,6 @@ $txt-color: #1F2041;
 	}
 }
 
-// <ORDER SELECT>====================================================================================================
-.order-select {
-	position: relative;
-	z-index: 5;
-
-	// .order-select__title
-	&__title {
-		width: 100%;
-		max-width: 100%;
-		color: rgba($color: $txt-color, $alpha: .75);
-		border: 1px solid rgba($color: $txt-color, $alpha: .25);
-		background-color: #fff;
-		cursor: pointer;
-		border-radius: 4px;
-	}
-	// .order-select__value
-	&__value {
-		display: flex;
-		padding: 13px 15px;
-    font-size: 14px;
-    line-height: 18px;
-		align-items: center;
-		justify-content: space-between;
-		flex-direction: row-reverse;
-		span {
-			padding-right: 1em;
-			text-overflow: ellipsis;
-			overflow: hidden;
-			display: -webkit-box;
-			-webkit-line-clamp: 1;
-			-webkit-box-orient: vertical;
-		}
-		&:before {
-			content: ""; //url("images/icons/expand_more.svg");
-			display: inline-block;
-			transition: all 0.3s ease 0s;
-			width: 14px;
-			height: 14px;
-			background: url("images/icons/expand_more.svg") center / 100% no-repeat;
-		}
-	}
-	// .order-select__options
-	&__options {
-		width: 100%;
-		max-width: 100%;
-		color: rgba($color: $txt-color, $alpha: .75);
-		//display: none;
-		z-index: 5;
-		position: absolute;
-		top: 43px;
-		border-radius: 0 0 4px 4px;
-		min-width: 100%;
-		left: 0;
-		background-color: #fff;
-		border-top: 0;
-		border: 1px solid rgba($color: $txt-color, $alpha: .25);
-		border-top: 0;
-		font-size: 14px;
-		padding: 10px 0px 10px 0px;
-	}
-	// .order-select__option
-	&__option {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		padding: 10px 15px;
-		margin: 0px 0px 0px 0px;
-		&:hover {
-			background: rgba($color: $txt-color, $alpha: .05);
-		}
-	}
-	// .order-select__option-title
-	&__option-title {
-		flex: 1 1 auto;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		font-weight: bold;
-		font-size: 12px;
-		line-height: 15px;
-		text-transform: uppercase;
-		color: $txt-color;
-		white-space: nowrap;
-	}
-	// .order-select__quantity
-	&__quantity {
-	}
-
-	&._active {
-		z-index: 5;
-		.order-select__title {
-			border: 1px solid rgba($color: $txt-color, $alpha: .75);
-		}
-		.order-select__value {
-			&:before {
-				transform: scaleY(-1);
-			}
-		}
-		.order-select__options {
-			display: block;
-			border: 1px solid rgba($color: $txt-color, $alpha: .75);
-		}
-	}
-	&._hover {
-
-		.order-select__title {
-			border: 1px solid rgba($color: $txt-color, $alpha: .75);
-		}
-		.order-select__options {
-			border: 1px solid rgba($color: $txt-color, $alpha: .75);
-		}
-	}
-}
-// </ORDER SELECT>====================================================================================================
 
 //<SELECT>====================================================================================================
 .select {
@@ -221,6 +112,7 @@ $txt-color: #1F2041;
 	&__options {
 		color: rgba($color: $txt-color, $alpha: .75);
 		display: none;
+		z-index: 0;
 		position: absolute;
 		top: 43px;
 		border-radius: 0 0 4px 4px;
@@ -267,61 +159,6 @@ $txt-color: #1F2041;
 	}
 }
 //</SELECT>====================================================================================================
-
-//<QUANTITY>====================================================================================================
-.quantity {
-	width: 92px;
-	display: flex;
-	// .quantity__button
-	&__button {
-		flex: 0 0 30px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 30px;
-		height: 30px;
-		border-radius: 50%;
-		border: 1px solid rgba($color: $txt-color, $alpha: .5);
-		//position: relative;
-		cursor: pointer;
-
-		span {
-			display: inline-block;
-			vertical-align: middle;
-			color: rgba($color: $txt-color, $alpha: .5);
-			text-align: center;
-			font-size: 20px;
-			//line-height: 18px;
-		}
-		&:hover {
-			
-		}
-		// .quantity__button_plus
-		&_plus {
-		}
-		// .quantity__button_minus
-		&_minus {
-		}
-	}
-	// .quantity__input
-	&__input {
-		flex: 1 1 auto;
-		input {
-			width: 100%;
-			height: 100%;
-			padding: 0 6px;
-			background: transparent;
-			font-weight: bold;
-			font-size: 12px;
-			line-height: 15px;
-			color: $txt-color;
-			text-align: center;
-		}
-	}
-}
-//</QUANTITY>====================================================================================================
-
-
 
 
 
