@@ -1,8 +1,7 @@
 
-$txt-color: #1F2041;
-$t: 10s;
-
+@import '../const';
 @import '../order-select/order-select';
+@import '../checkbox/checkbox';
 
 .input {
 	border-radius: 5px !important;
@@ -53,12 +52,6 @@ $t: 10s;
     &._hover {
       border: 1px solid rgba($color: $txt-color, $alpha: .75);
     }
-	}
-}
-
-.order-dropdown {
-	// .order-dropdown__title
-	&__title {
 	}
 }
 

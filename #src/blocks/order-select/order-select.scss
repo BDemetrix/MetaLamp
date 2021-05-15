@@ -1,3 +1,4 @@
+@import '../const';
 // <ORDER SELECT>====================================================================================================
 .order-select {
 	position: relative;
@@ -10,7 +11,7 @@
 		border: 1px solid rgba($color: $txt-color, $alpha: .25);
 		background-color: #fff;
 		cursor: pointer;
-		border-radius: 4px;
+		border-radius: 4px 4px 0 0 ;
 	}
 	// .order-select__value
 	&__value {
@@ -45,9 +46,9 @@
 		color: rgba($color: $txt-color, $alpha: .75);
 		display: none;
 		position: absolute;
-		//z-index: -1;
-		top: 43px;
+		top: 45px;
 		border-radius: 0 0 4px 4px;
+		border-top: 0;
 		min-width: 100%;
 		left: 0;
 		background-color: #fff;
@@ -62,6 +63,8 @@
 		padding: 3.5px 7px 3.5px 15px;
 		margin: 0px 0px 0px 0px;
 		cursor: default;
+		opacity: 0;
+		transition: all .1s linear;
 		&:hover {
 			background: rgba($color: $txt-color, $alpha: .05);
 		}
@@ -99,6 +102,10 @@
 		color: rgba($color: $txt-color, $alpha: .25);
 		background: none;
 		border: none;
+
+			&:hover {
+				color: rgba($color: $txt-color, $alpha: .75);
+			}
 		
 		// .order-select__button_clean
 		&_clean {
@@ -121,6 +128,9 @@
 		.order-select__options {
 			display: block;
 			border: 1px solid rgba($color: $txt-color, $alpha: .75);
+		}
+		.order-select__option {
+			opacity: 1;
 		}
 	}
 	&._hover {
