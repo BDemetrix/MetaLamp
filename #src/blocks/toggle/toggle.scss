@@ -92,9 +92,6 @@
         transform: translate(24px, -50%);
         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
       }
-      &:hover {
-        color: rgba($color: $txt-color, $alpha: .75);
-      }
 		}
 	}
 	// .toggle__text
@@ -133,7 +130,7 @@
       background: rgba($color: $txt-color, $alpha: .25);
     }
 		&:hover {
-			color: rgba($color: $txt-color, $alpha: 1);
+			color: rgba($color: $txt-color, $alpha: .75);
       &::before {
         border: 1px solid rgba($color: $txt-color, $alpha: .5);
       }
