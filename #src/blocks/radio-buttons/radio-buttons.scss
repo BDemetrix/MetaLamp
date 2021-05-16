@@ -83,6 +83,8 @@
 		opacity: 0;
 		visibility: hidden;
 		&:checked + .radio__text {
+      cursor: default;
+
 			&::before {
         border: 1px solid $color-1;
       }
