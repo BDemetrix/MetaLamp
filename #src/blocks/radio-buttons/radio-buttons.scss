@@ -68,7 +68,6 @@
 .radio {
 	position: relative;
   margin-right: 20px;
-  margin-bottom: 10px;
   padding: 0;
   display: inline-block;
   line-height: 0px;
@@ -116,14 +115,14 @@
 			border-radius: 50%;
 		}
 		&:before {
-      top: -1px;
+      top: 0px;
       left: 0;
 			width: 20px;
 			height: 20px;
 			border: 1px solid rgba($color: $txt-color, $alpha: .25);
 		}
     &:after {
-      top: 3px;
+      top: 4px;
       left: 4px;
       transform: scale(0);
       transition: all $t ease;
