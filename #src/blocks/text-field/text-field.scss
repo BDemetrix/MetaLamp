@@ -1,0 +1,33 @@
+@import '../const';
+
+.text-field {
+	// .text-field__title
+	&__title {
+	}
+	// .text-field__input
+	&__input {
+    display: inline-flex;
+    min-width: 100%;
+    overflow: hidden;
+    border-radius: 4px;
+    border: 1px solid rgba($color: $txt-color, $alpha: .25);
+
+    input {
+      flex: 1 1 auto;
+    }
+    &._focus,
+    &._hover {
+      border: 1px solid rgba($color: $txt-color, $alpha: .75);
+    }
+	}
+  // .text-field__btn
+  &__btn {
+    margin-right: 14px;
+    width: 18px;
+    background: url('../text-field/images/arrow_forward.svg') center no-repeat;
+  }
+  &_subscription {
+
+  }
+
+}
