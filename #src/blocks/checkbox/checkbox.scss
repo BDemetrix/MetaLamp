@@ -82,33 +82,57 @@
 		height: 0;
 		opacity: 0;
 		visibility: hidden;
-		&:checked + .checkbox__text:before {
-			background:  url("../checkbox/images/check.svg") 4px 2px  no-repeat; // check.svg
-      //background: #000;
-      //content: url("images/check.svg");
+		&:checked + .checkbox__text { 
+			&:before {
+				border: 1px solid $color-1;
+			}
+			&::after {
+				transform: scale(1);
+			}
+			&:hover {
+				color: rgba($color: $txt-color, $alpha: .75);
+			}
 		}
+		/* &:checked + .checkbox__text-title
+		.checkbox__text-subtitle */
 	}
 	// .checkbox__text
 	&__text {
 		display: inline-flex;
 		align-items: center;
 		position: relative;
+    padding-left: 30px;
     font-size: 14px;
     line-height: 18px;
 		color: rgba($color: $txt-color, $alpha: .5);
 		cursor: pointer;
-		&:before {
+
+		&::before, 
+		&::after  {
 			content: "";
-			align-self: flex-start;
-			margin: 0px 10px 0px 0px;
-			flex: 0 0 20px;
+			display: block;
+			position: absolute;
 			width: 20px;
 			height: 20px;
-			border: 1px solid $color-1;
+			left: 0;
+      top: -1px;
+			width: 20px;
+			height: 20px
+		}
+		&:before {
+			border: 1px solid rgba($color: $txt-color, $alpha: .25);
       border-radius: 4px;
+		}
+		&::after {
+			transition: all $t ease;
+			transform: scale(0);
+			background:  url("../checkbox/images/check.svg") 5px 3px  no-repeat; 
 		}
 		&:hover {
 			color: rgba($color: $txt-color, $alpha: 1);
+			&::before {
+        border: 1px solid rgba($color: $txt-color, $alpha: .5);
+      }
 		}
 	}
   // .checkbox__text-title
@@ -117,6 +141,10 @@
     font-size: 14px;
     line-height: 18px;
     color: rgba($color: $txt-color, $alpha: .75);
+
+		&:hover {
+			color: rgba($color: $txt-color, $alpha: 1);
+		}
 	}
 	// .checkbox__text-subtitle
 	&__text-subtitle {
