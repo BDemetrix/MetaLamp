@@ -1,0 +1,36 @@
+@import 'const';
+.input {
+	border-radius: 5px !important;
+	width: 100%;
+	display: block;
+	padding: 13px 15px;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba($color: $txt-color, $alpha: .75);
+  font-family: "Montserrat";
+
+  &::placeholder {
+    color: rgba($color: $txt-color, $alpha: .25);
+  }
+  &:hover,
+  &:focus {
+    &::placeholder {
+      color: rgba($color: $txt-color, $alpha: .50);
+    }
+  }
+	&._focus {
+	}
+	&._error {
+	}
+}
+// GENERAL CLASS FOR FIELD HEADERS
+.field-title {
+	margin: 0;
+	padding: 5px 0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: $txt-color;
+}
