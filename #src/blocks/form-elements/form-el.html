@@ -66,74 +66,85 @@
   <div class="wrapper">
     <div class="col">
       <div class="col__item"> <!-- text-field -->
-
-        <div class="text-field">
-          <h3 class="text-field__title field-title">Text Field</h3>
-          <div class="text-field__input">
-            <input class="input" type="text" autocomplete="off" name="form[]" placeholder="Text">
-          </div>
-        </div>
-
-      </div>
-      <div class="col__item"> <!-- dropdown -->
-
-        <div class="dropdown">
-          <h3 class="dropdown__title field-title">Dropdown</h3>
-          <select name="">
-            <option value="0" selected="selected">Сколько гостей</option>
-            <option value="1">1 гость</option>
-            <option value="2">2 гостя</option>
-            <option value="3">3 гостя</option>
-            <option value="4">4 гостя</option>
-            <option value="5">5 гостей</option>
-          </select>
-        </div>
-      
+        @@include('../text-field/text-field.html',
+        { "Title":"Text Field", 
+          "Placeholder":"Text", 
+          "Class":"", 
+          "Type":"text",
+          "Name":""})
       </div>
       <div class="col__item"> <!-- masked text field -->
-        
-        <!-- masked text field -->
-        <div class="text-field">
-          <h3 class="text-field__title field-title">Masked text field</h3>
-          <div class="text-field__input">
-            <input class="input _date" type="text" autocomplete="off" name="form[]" placeholder="ДД.ММ.ГГГГ">
-          </div>
-        </div>
-
+        @@include('../text-field/text-field.html',
+        { "Title":"Masked text field",
+        "Placeholder":"ДД.ММ.ГГГГ",
+        "Class":"_date",
+        "Type":"text",
+        "Name":""})
       </div>
-      <div class="col__item"> 
-        <!-- Order dropdown type="conveniences" -->
+      <div class="col__item"> <!-- subscription text field -->
+        @@include('../text-field/subscription-field.html',
+        { "Title":"Subscription text field",
+        "Placeholder":"Email",
+        "Class":"_email",
+        "Type":"text",
+        "Name":""})
+      </div>
+      <div class="col__item"> <!-- Order dropdown type="conveniences" -->
         @@include('../order-select/order-select-conveniences.html')
       </div>
-      <div class="col__item">
-        <!-- Order select type="guests" -->
+      <div class="col__item"> <!-- Order select type="guests" -->
         @@include('../order-select/order-select-guests.html')
       </div>
-
-      <div class="col__item">
+      <div class="col__item"> <!-- rules -->
         @@include('../checkbox/checkbox-rules.html')
       </div>
-      <div class="col__item">
+      <div class="col__item"> <!-- comfort -->
         @@include('../checkbox/checkbox-comfort.html')
       </div>
-      <div class="col__item">
+      <div class="col__item"> <!-- add-comfort -->
         @@include('../checkbox/checkbox-add-comfort.html')
       </div>
+      <div class="col__item"> <!-- radio-buttons -->
+        @@include('../radio-buttons/radio-buttons.html',
+        { "Title":"radio buttons",
+        "Class":"",
+        "Name":"sex"})
+      </div>
+      <div class="col__item">
+        @@include('../toggle/toggles.html',
+        { "Title":"toggle",
+          "Class":""})
 
+        <!-- <div class="toggle-box">
+          <h3 class="toggle-box__title">toggle</h3>
+          <div class="toggle-box__list">
+            @@include('../toggle/toggle.html', { 
+            "Text":"Получать спецпредложения",
+            "Value":"offers",
+            "Name":"",
+            "Checked":"checked"})
+
+            @@include('../toggle/toggle.html',{
+            "Text":"Получать спецпредложения",
+            "Value":"offers",
+            "Name":"",
+            "Checked":""})
+          </div>
+        </div> -->
+      </div>
       <div class="col__item">
         
         <!-- Date Dropdown -->
         <div class="date-field">
           <h3 class="date-field__title field-title">Date Dropdown</h3>
           <div class="date-field__input">
-            <input type="text" data-date="01/25/2020" readonly="">
+            <input class="input" type="text" data-date="01/25/2020" readonly="">
           </div>
         </div>
 
       </div>
-      <div class="col__item">
-      
-        <!-- filter date dropdown -->
+      <div class="col__item"> <!-- filter date dropdown -->
+
         <div class="filter-date">
           <h3 class="filter-date__title field-title">Filter Date Dropdown</h3>
           <select class="filter-date__select" name="">
@@ -148,27 +159,12 @@
 
       </div>
       <div class="col__item">
-        
-        <!-- subscription text field -->
-        <div class="subscribe-field">
-          <h3 class="subscribe-field field-title">subscription text field</h3>
-          <div class="subscribe-field__input">
-            <input type="text" placeholder="Email">
-            <button class="subscribe-field__btn">
-              <svg>
-                <!-- <use xlink:href="images/symbol/sprite.svg#arrow"></use> -->
-              </svg>
-            </button>
-          </div>
-        </div>
 
       </div>
       <div class="col__item">
       
       </div>
       <div class="col__item">
-      
-      
       
       </div>
       <div class="col__item">
