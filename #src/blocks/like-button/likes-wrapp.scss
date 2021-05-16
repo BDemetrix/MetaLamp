@@ -1,0 +1,22 @@
+@import '../const';
+
+.likes {
+
+	// .likes__title
+	&__title {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: $txt-color;
+    margin-bottom: 16px;
+    padding-right: 15px;
+	}
+	// .likes__list
+	&__list {
+	}
+
+  .like {
+    margin-right: 10px;
+  }
+}

@@ -1,0 +1,37 @@
+@import '../const';
+
+.like {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 10px;
+  padding-right: 9px;
+  border: 1px solid rgba($color: $txt-color, $alpha: .25);
+  transition: all $t ease;
+	// .like__icon
+	&__icon {
+    width: 19px;
+    height: 18px;
+    background: url('../like-button/like_icon.svg') center no-repeat;
+    transition: all $t ease;
+	}
+	// .like__count
+	&__count {
+    min-width: 10px;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+    color: rgba($color: $txt-color, $alpha: .25);
+    transition: all $t ease;
+	}
+
+  &._active {
+    border: 1px solid $color-1;
+
+    .like__icon {
+      background: url('../like-button/favorite.svg') center no-repeat;
+    }
+    .like__count {
+      color: $color-1;
+    }
+  }
+}
