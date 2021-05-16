@@ -114,23 +114,11 @@
         @@include('../toggle/toggles.html',
         { "Title":"toggle",
           "Class":""})
-
-        <!-- <div class="toggle-box">
-          <h3 class="toggle-box__title">toggle</h3>
-          <div class="toggle-box__list">
-            @@include('../toggle/toggle.html', { 
-            "Text":"Получать спецпредложения",
-            "Value":"offers",
-            "Name":"",
-            "Checked":"checked"})
-
-            @@include('../toggle/toggle.html',{
-            "Text":"Получать спецпредложения",
-            "Value":"offers",
-            "Name":"",
-            "Checked":""})
-          </div>
-        </div> -->
+      </div>
+      <div class="col__item">
+        @@include('../like-button/likes.html',
+        { "Title":"like button",
+          "Class":""})
       </div>
       <div class="col__item">
         
@@ -183,6 +171,7 @@
   <script src="../order-select/OrderSelect.js"></script>
   <script src="select.js"></script>
   <script src="../checkbox/checkbox.js"></script>
+  <script src="../like-button/like.js"></script>
   <script src="form-el.js"></script>
 </body>
 </html>
