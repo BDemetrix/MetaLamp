@@ -2,7 +2,7 @@
   let likeBtns = document.querySelectorAll('.like');
   likeBtns.forEach(likeBtn => {
     initLike(likeBtn);
-    const likeCount = likeBtn.querySelector('.like__count span');
+    const likeCount = likeBtn.querySelector('.like__count');
     likeBtn.addEventListener('click', () => {
       if (likeBtn.dataset.like == 'false') {
         likeCount.textContent = +likeCount.textContent + 1;

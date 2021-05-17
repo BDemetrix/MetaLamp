@@ -4,7 +4,8 @@
   display: inline-flex;
   align-items: center;
   border-radius: 10px;
-  padding-right: 9px;
+  min-width: 40px;
+  padding-right: 7px;
   border: 1px solid rgba($color: $txt-color, $alpha: .25);
   transition: all $t ease;
 	// .like__icon
@@ -16,6 +17,7 @@
 	}
 	// .like__count
 	&__count {
+    flex: 1 1 auto;
     min-width: 10px;
     font-size: 10px;
     line-height: 12px;
