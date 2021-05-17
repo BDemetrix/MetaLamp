@@ -1,0 +1,72 @@
+@import '../const';
+
+.rating {
+  position: relative;
+	display: inline-block;
+  margin-right: 25px;
+
+	// .rating__items
+	&__items {
+	  display: flex;
+	  flex-direction: row-reverse;
+	  overflow: hidden;
+	}
+	// .rating__item
+	&__item {
+    position: absolute;
+	  width: 0%;
+	  height: 0%;
+	  opacity: 0;
+	  visibility: hidden;
+	  top: 0;
+	  left: 0;
+
+    &:checked,
+    &:checked &:hover,
+    &:checked ~ .rating__label,
+    &:checked + .rating__label:hover {
+      &::after {
+        opacity: 1;
+      }
+    }
+    &:hover,
+    &:hover ~ .rating__label {
+      &::after {
+        opacity: 0.5;
+      }
+    }
+	}
+	// .rating__label
+	&__label {
+    flex: 0 0 24px;
+    cursor: pointer;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 24px;
+      height: 24px;
+      background: url(../rate-button/star_border.svg) center / 20px no-repeat;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: url(../rate-button/star.svg) center / 20px no-repeat;
+      opacity: 0;
+      transition: all $t ease;
+    }
+
+    &:hover,
+    &:hover ~ & {
+
+      &::after {
+        opacity: 0.5;
+      }
+    }
+	} 
+}
