@@ -132,7 +132,7 @@
 			height: 20px;
 			transition: transform $t ease;
 			transform: scale(0);
-			background:  url("../checkbox/images/check.svg") 5px 4px  no-repeat; 
+			background:  url("../checkbox/images/check.svg") 5px 3.3px  no-repeat; 
 		}
 		&:hover {
 			color: rgba($color: $txt-color, $alpha: 0.75);
