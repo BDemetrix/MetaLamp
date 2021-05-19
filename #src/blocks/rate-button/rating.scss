@@ -13,23 +13,23 @@
 	}
 	// .rating__item
 	&__item {
-    position: absolute;
-	  width: 0%;
-	  height: 0%;
-	  opacity: 0;
-	  visibility: hidden;
-	  top: 0;
-	  left: 0;
+    width: 1px;
+		height: 1px;
+		margin: -1px;
+		padding: 0;
+		border: 0;
+		//opacity: 0;
+		//visibility: hidden;
+		clip: rect(0,0,0,0);
 
-    &:checked,
-    &:checked:hover ~ .rating__label,
     &:checked ~ .rating__label,
-    &:checked + .rating__label:hover {
+    &:checked + .rating__label:hover,
+    &:checked:hover ~ .rating__label {
       &::after {
         opacity: 1;
       }
     }
-    &:hover,
+    
     &:hover ~ .rating__label {
       &::after {
         opacity: 0.5;
@@ -61,5 +61,6 @@
       opacity: 0;
       transition: all $t ease;
     }
+
 	} 
 }
