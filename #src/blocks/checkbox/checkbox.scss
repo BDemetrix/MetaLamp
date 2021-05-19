@@ -17,16 +17,15 @@
     transition-timing-function: linear;
 	}
   
-  // .checkboxes
+  // .checkboxes_dropdown 
   &_dropdown {
+		transition-timing-function: ease-in-out; 
 
     .checkboxes__title {
       cursor: pointer;
       display: flex;
 		  align-items: center;
       height: auto;
-		  //justify-content: space-between;
-		  //flex-direction: row-reverse;
 		  span {
 		  	padding-right: 30px;
 
@@ -78,10 +77,14 @@
 	// .checkbox__input
 	&__input {
 		position: absolute;
-		width: 0;
-		height: 0;
-		opacity: 0;
-		visibility: hidden;
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		padding: 0;
+		border: 0;
+		//opacity: 0;
+		//visibility: hidden;
+		clip: rect(0,0,0,0);
 		&:checked + .checkbox__text { 
 			&:before {
 				border: 1px solid $color-1;
@@ -90,6 +93,12 @@
 				transform: scale(1);
 			}
 		}
+		/* &:focus + .checkbox__text {
+			color: rgba($color: $txt-color, $alpha: 0.75);
+			&::before {
+        border: 1px solid rgba($color: $txt-color, $alpha: .5);
+      }
+		} */
 	}
 	// .checkbox__text
 	&__text {
@@ -98,7 +107,7 @@
 		position: relative;
     padding-left: 30px;
     font-size: 14px;
-    line-height: 18px;
+    line-height: 20px;
 		color: rgba($color: $txt-color, $alpha: .5);
 		cursor: pointer;
 
@@ -113,17 +122,17 @@
 			width: 20px;
 		}
 		&:before {
-			top: -1px;
+			top: 0px;
 			height: 20px;
 			border: 1px solid rgba($color: $txt-color, $alpha: .25);
       border-radius: 4px;
 		}
 		&::after {
 			top: 0;
-			height: 18px;
+			height: 20px;
 			transition: transform $t ease;
 			transform: scale(0);
-			background:  url("../checkbox/images/check.svg") 5px 3px  no-repeat; 
+			background:  url("../checkbox/images/check.svg") 5px 4px  no-repeat; 
 		}
 		&:hover {
 			color: rgba($color: $txt-color, $alpha: 0.75);

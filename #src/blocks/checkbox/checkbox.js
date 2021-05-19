@@ -7,5 +7,12 @@
       _slideToggle(checkboxList, 200);
       checkbox.classList.toggle('_active');
     })
+    let display = window.getComputedStyle(checkboxList).display;
+    if (display == 'none') {
+      _slideUp(checkboxList, 0);
+    }
+    else {
+      _slideDown(checkboxList, 0);
+    }
   });
 })();
