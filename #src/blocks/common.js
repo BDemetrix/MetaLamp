@@ -3,7 +3,7 @@
 let _slideUp = (target, duration = 500) => {
   target.style.transitionProperty = 'height, margin, padding';
   target.style.transitionDuration = duration + 'ms';
-  target.style.transitionTimingFunction = 'linear';
+  //target.style.transitionTimingFunction = 'linear';
   target.style.height = target.offsetHeight + 'px';
   target.offsetHeight;
   target.style.overflow = 'hidden';
@@ -22,7 +22,7 @@ let _slideUp = (target, duration = 500) => {
     target.style.removeProperty('overflow');
     target.style.removeProperty('transition-duration');
     target.style.removeProperty('transition-property');
-    target.style.removeProperty('transition-timing-function');
+    //target.style.removeProperty('transition-timing-function');
     target.classList.remove('_slide');
   }, duration);
 }
@@ -43,7 +43,7 @@ let _slideDown = (target, duration = 500) => {
   target.offsetHeight;
   target.style.transitionProperty = "height, margin, padding";
   target.style.transitionDuration = duration + 'ms';
-  target.style.transitionTimingFunction = 'linear';
+  //target.style.transitionTimingFunction = 'linear';
   target.style.height = height + 'px';
   target.style.removeProperty('padding-top');
   target.style.removeProperty('padding-bottom');
@@ -54,7 +54,7 @@ let _slideDown = (target, duration = 500) => {
     target.style.removeProperty('overflow');
     target.style.removeProperty('transition-duration');
     target.style.removeProperty('transition-property');
-    target.style.removeProperty('transition-timing-function');
+    //target.style.removeProperty('transition-timing-function');
     target.classList.remove('_slide');
   }, duration);
 }
