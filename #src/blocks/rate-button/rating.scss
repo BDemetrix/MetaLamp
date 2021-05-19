@@ -22,7 +22,7 @@
 	  left: 0;
 
     &:checked,
-    &:checked &:hover,
+    &:checked:hover ~ .rating__label,
     &:checked ~ .rating__label,
     &:checked + .rating__label:hover {
       &::after {
@@ -35,6 +35,7 @@
         opacity: 0.5;
       }
     }
+
 	}
 	// .rating__label
 	&__label {
@@ -59,14 +60,6 @@
       background: url(../rate-button/star.svg) center / 20px no-repeat;
       opacity: 0;
       transition: all $t ease;
-    }
-
-    &:hover,
-    &:hover ~ & {
-
-      &::after {
-        opacity: 0.5;
-      }
     }
 	} 
 }
