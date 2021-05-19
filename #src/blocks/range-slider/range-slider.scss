@@ -1,0 +1,129 @@
+@import '../const';
+
+.range-slider {
+  position: relative;
+
+  // .range-slider__header 
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 18px;
+  }
+	// .range-slider__title
+	&__title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+	}
+  // .range-slider__value
+	&__value {
+    //display: inline-block;
+    //display: inline-flex;
+    color: rgba($color: $txt-color, $alpha: .5);
+	}
+	// .range-slider__field
+	&__field {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    transition: all $t linear;
+	}
+	// .range-slider__body
+	&__body {
+    padding-bottom: 15px;
+	}
+	// .range-slider__slider
+	&__slider {
+    max-width: 100%;
+	}
+	// .range-slider__note
+	&__note {
+    font-size: 12px;
+    line-height: 14px;
+	}
+}
+
+
+.noUi-target {
+  position: relative;
+  height: 6px;
+  box-sizing: border-box;
+  background-color: #fff;
+  margin: 0px 11px;
+  position: relative;
+  border-top: 1px solid rgba($color: $txt-color, $alpha: .25);
+  border-bottom: 1px solid rgba($color: $txt-color, $alpha: .25);
+  
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 6px;
+    position: absolute;
+    top: -1px;
+    box-sizing: border-box;
+    border: 1px solid rgba($color: $txt-color, $alpha: .25);
+    background-color: #fff;
+  }
+  &::before {
+    left: -10px;
+    border-radius: 3px 0 0 3px;
+    border-right: 0;
+  }
+  &::after {
+    right: -10px;
+    border-radius: 0 3px 3px 0;
+    border-left: 0;
+  }
+}
+.noUi-base, 
+.noUi-connects {
+    /* width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;*/
+} 
+
+.noUi-base {
+
+  
+}
+.noUi-connects {
+	
+
+}
+.noUi-connect {
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  
+}
+.noUi-handle {
+    width: 16px;
+    height: 16px;
+    top: -8px;
+    right: -11px;
+    border: 2px solid #fff;
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    border-radius: 50%;
+    &::after {
+      display: none;
+    }
+}
+.noUi-tooltip {
+    /* display: inline-block;
+    position: absolute;
+    bottom: -25px;
+    right: 50%;
+    transform: translate(50%, 0);
+    background: #fff;
+    color: #000;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1em;
+    color: $inactive-txt; */
+} 

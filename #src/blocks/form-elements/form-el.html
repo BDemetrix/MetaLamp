@@ -110,17 +110,17 @@
         "Class":"",
         "Name":"sex"})
       </div>
-      <div class="col__item">
+      <div class="col__item"> <!-- toggles -->
         @@include('../toggle/toggles.html',
         { "Title":"toggle",
           "Class":""})
       </div>
-      <div class="col__item">
+      <div class="col__item"> <!-- like-button -->
         @@include('../like-button/likes.html',
         { "Title":"like button",
           "Class":""})
       </div>
-      <div class="col__item">
+      <div class="col__item"> <!-- rate-buttons -->
         @@include('../rate-button/rate-buttons.html',
         { "Title":"rate button",
           "Title-Class":"field-title",
@@ -152,8 +152,14 @@
         </div>
 
       </div>
-      <div class="col__item">
-
+      <div class="col__item"> <!-- range-slider -->
+        @@include('../range-slider/range-slider.html',
+        { "Class":"",
+          "Title":"range slider",
+          "Title-Class":"field-title",
+          "Name": "form[]",
+          "Note": "Стоимость за сутки пребывания в номере"
+        })
       </div>
       <div class="col__item">
       
@@ -172,12 +178,16 @@
     <div class="col"></div>
     <div class="col"></div>
   </div>
+  <script src="../vendors/js/wNumb.min.js"></script>
   <script src="../vendors/js/inputmask.min.js"></script>
+  <script src="../vendors/js/nouislider.js"></script>
+  
   <script src="../common.js"></script>
   <script src="../order-select/OrderSelect.js"></script>
   <script src="select.js"></script>
   <script src="../checkbox/checkbox.js"></script>
   <script src="../like-button/like.js"></script>
+  <script src="../range-slider/range-slider.js"></script>
   <script src="form-el.js"></script>
 </body>
 </html>
