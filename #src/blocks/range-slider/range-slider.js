@@ -21,12 +21,14 @@
         }
       });
 
-      let fields = [];
-      fields.push(slider.parentElement.parentElement.querySelector('#range-slider_start'));
-      fields.push(slider.parentElement.parentElement.querySelector('#range-slider_end'));
+      let valueFields = [];
+      valueFields.push(slider.parentElement.parentElement.querySelector('#range-slider_min'));
+      valueFields.push(slider.parentElement.parentElement.querySelector('#range-slider_max'));
+      let visibleFields = valueFields.map(el => el.parentElement.querySelector('.range-slider__display'));
       
       slider.noUiSlider.on('update', function (values, handle) {
-        fields[handle].textContent = values[handle];
+        valueFields[handle].value = wNumbFormat.from(values[handle]);
+        visibleFields[handle].textContent = values[handle];
       });
     });
   }  

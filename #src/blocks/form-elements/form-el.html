@@ -32,6 +32,7 @@
     }
     .wrapper {
       display: flex;
+      flex-wrap: wrap;
       margin: 0 -30px;
     }
     .col {
@@ -115,30 +116,34 @@
         { "Title":"toggle",
           "Class":""})
       </div>
+    </div>
+  
+    <div class="col">
       <div class="col__item"> <!-- like-button -->
+        
         @@include('../like-button/likes.html',
         { "Title":"like button",
-          "Class":""})
+        "Class":""})
       </div>
       <div class="col__item"> <!-- rate-buttons -->
+        
         @@include('../rate-button/rate-buttons.html',
         { "Title":"rate button",
-          "Title-Class":"field-title",
-          "Class":""})
+        "Title-Class":"field-title",
+        "Class":""})
       </div>
-      <div class="col__item">
-        
-        <!-- Date Dropdown -->
+      <div class="col__item"> <!-- Date Dropdown -->
+      
         <div class="date-field">
           <h3 class="date-field__title field-title">Date Dropdown</h3>
           <div class="date-field__input">
             <input class="input" type="text" data-date="01/25/2020" readonly="">
           </div>
         </div>
-
+      
       </div>
       <div class="col__item"> <!-- filter date dropdown -->
-
+       
         <div class="filter-date">
           <h3 class="filter-date__title field-title">Filter Date Dropdown</h3>
           <select class="filter-date__select" name="">
@@ -150,15 +155,16 @@
             <option class="filter-date__option" value="5">option 5</option>
           </select>
         </div>
-
+      
       </div>
       <div class="col__item"> <!-- range-slider -->
+       
         @@include('../range-slider/range-slider.html',
         { "Class":"",
-          "Title":"range slider",
-          "Title-Class":"field-title",
-          "Name": "form[]",
-          "Note": "Стоимость за сутки пребывания в номере"
+        "Title":"range slider",
+        "Title-Class":"field-title",
+        "Name": "price",
+        "Note": "Стоимость за сутки пребывания в номере"
         })
       </div>
       <div class="col__item">
@@ -169,14 +175,13 @@
       </div>
       <div class="col__item">
       
-        
+      
       
       </div>
+    </div>
+    <div class="col">
 
     </div>
-  
-    <div class="col"></div>
-    <div class="col"></div>
   </div>
   <script src="../vendors/js/wNumb.min.js"></script>
   <script src="../vendors/js/inputmask.min.js"></script>
