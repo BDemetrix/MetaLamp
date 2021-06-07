@@ -1,0 +1,32 @@
+@import '../const';
+
+.bullets {
+
+	// .bullets__title
+	&__title {
+    padding-left: 20px;
+	}
+	// .bullets__list
+	&__list {
+    color: rgba($color: $txt-color, $alpha: .75);
+    font-size: 14px;
+    line-height: 24px;
+	}
+	// .bullets__item
+	&__item {
+    position: relative;
+    padding-left: 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+
+      top: 6px;
+      left: 0;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba($color: $txt-color, $alpha: .5);
+    }
+	}
+}
